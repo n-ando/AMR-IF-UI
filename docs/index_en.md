@@ -1,4 +1,4 @@
-﻿# AMR-IF
+﻿# AMR-IF-UI: TOC
 
 <a href="index"><img src="figs/ja.png"></a><img src="figs/en.png">
 
@@ -10,6 +10,6 @@ This package is a Web GUI interface package for mobile robots (Autonomous Mobile
 
 - [1. Setup](setup_en)
 - [2. Installation](install_en)
-- [3. Deployment](deproy_en)
+- [3. Deployment](deploy_en)
 - [4. UI Elements and Functions](gui_en)
 

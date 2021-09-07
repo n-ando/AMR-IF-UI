@@ -1,4 +1,4 @@
-﻿# AMR-IF: 環境構築
+﻿# AMR-IF-UI: 環境構築
 
 <!-- TOC -->
 
@@ -52,7 +52,8 @@ $ sudo apt upgrade
 $ sudo apt install nodejs npm
 ```
 
-更に、npm で n package を使って node をインストールする。
+更に、npm で n package をインストールし、n package を使って新しい node をインストールします。
+
 
 ```shell
 $ sudo npm install n -g

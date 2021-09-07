@@ -1,4 +1,4 @@
-﻿# AMR-IF
+﻿# AMR-IF-UI: 目次
 
 <img src="figs/ja.png"><a href="index_en"><img src="figs/en.png"></a>
 
@@ -10,6 +10,6 @@
 
 - [1. 環境構築](setup)
 - [2. インストール](install)
-- [3. デプロイ](deproy)
+- [3. デプロイ](deploy)
 - [4. UI要素と機能](gui)
 

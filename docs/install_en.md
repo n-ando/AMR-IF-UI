@@ -1,4 +1,4 @@
-﻿# AMR-IF: Installation
+﻿# AMR-IF-UI: Installation
 <!-- TOC -->
 
 - [1. Installation](#1-installation)
