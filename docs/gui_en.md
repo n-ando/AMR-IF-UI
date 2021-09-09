@@ -8,6 +8,8 @@
 - [2. Viewer Key Control](#2-viewer-key-control)
 - [3. Command](#3-command)
     - [3.1. Command kind](#31-command-kind)
+        - [3.1.1. Single commands](#311-single-commands)
+        - [3.1.2. Mixed command](#312-mixed-command)
 
 <!-- /TOC -->
 ## 1. UI Elements and Functions
@@ -78,7 +80,7 @@ AMR-IF-UI supports some commands. These commands are defined in "src / assets / 
 
 AMR-IF-UI supports five single commands and one mixed command. Single commands are "run_nav", "kill_nav", "set_pose", "goto" and "cancel". Mixed command is "cmdlist".
 
-* Single commands
+#### 3.1.1. Single commands
 
 | cmd | parameter | description |
 |:---|:---|:---|
@@ -88,7 +90,7 @@ AMR-IF-UI supports five single commands and one mixed command. Single commands a
 | goto | mapfile_name, <br>goal_name | Instruct the robot to move. |
 | cancel | - | Stop moving. |
 
-* Mixed command
+#### 3.1.2. Mixed command
 
 | cmd | parameter | description |
 |:---|:---|:---|
