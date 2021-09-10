@@ -6,8 +6,8 @@
     - [1.2. ビューア](#12-ビューア)
     - [1.3. コントローラ](#13-コントローラ)
 - [2. キーコントロール](#2-キーコントロール)
-- [3. Command](#3-command)
-    - [3.1. Command kind](#31-command-kind)
+- [3. コマンド](#3-コマンド)
+    - [3.1. コマンド種類](#31-コマンド種類)
 
 <!-- /TOC -->
 ## 1. UIエレメントおよび機能
@@ -72,27 +72,30 @@ Sidenav (サイドナビ) は AMR-IF-UIの左側に表示されている5つの�
 Shiftキーを押しながら微調整が可能です。
 
 
-## 3. Command
+## 3. コマンド
 
-AMR-IF-UI supports some commands. These commands are defined in "src / assets / configs / config.json".
+AMR-IF-UIはいくつかのコマンドをサポートしています。
+これらのコマンドは "src/assets/configs/config.json" で定義されています。
 
 
-### 3.1. Command kind
+### 3.1. コマンド種類
 
-AMR-IF-UI supports five single commands and one mixed command. Single commands are "run_nav", "kill_nav", "set_pose", "goto" and "cancel". Mixed command is "cmdlist".
+AMR-IF-UIは、5つの単一コマンドと1つの複合コマンドをサポートします。
+単一のコマンドは、"run_nav"、"kill_nav"、"set_pose"、"goto"、および "cancel" です。 複合コマンドは "cmdlist" です。
 
-* Single commands
 
-| cmd | parameter | description |
+* 単一コマンド
+
+| コマンド | パラメータ | 説明 |
 |:---|:---|:---|
-| run_nav | mapfile_name | The robot starts the autonomous movement function. Execute only once before starting autonomous movement. |
-| kill_nav | - | The robot ends the autonomous movement function. Run run_nav to resume autonomous movement. |
-| set_pose | mapfile_name, <br>pose_name | Notify the current position to the robot at the start of autonomous movement. |
-| goto | mapfile_name, <br>goal_name | Instruct the robot to move. |
-| cancel | - | Stop moving. |
+| run_nav | mapfile_name | ロボットが自律移動機能を開始します。自律移動を開始する前に一度だけ実行します。|
+| kill_nav | - | ロボットは自律移動機能を終了します。 自律移動を再開するには run_nav を実行します。 |
+| set_pose | mapfile_name, <br>pose_name | 自律移動開始時にロボットに現在位置を通知します。|
+| goto | mapfile_name, <br>goal_name | ロボットに特定のゴールへ移動するように指示します。|
+| cancel | - | 移動を停止します。|
 
-* Mixed command
+* 複合コマンド
 
-| cmd | parameter | description |
+| コマンド | パラメータ | 説明 |
 |:---|:---|:---|
-| cmdlist | start_index | A series of commands. Commands are executed in order. When the command completes, execute the following command. If OK_nextid is specified, execute the command of OK_nextid. If an error occurs in the command, the CmdList ends. But NG_nextid is specified, execute the command of NG_nextid. |
+| cmdlist | start_index | 一連のコマンド。 コマンドは順番に実行されます。 コマンドが完了したら、次のコマンドを実行します。 OK_nextidを指定した場合は、OK_nextidのコマンドを実行します。 コマンドでエラーが発生した場合、CmdListは終了します。 ただし、NG_nextidが指定されている場合は、NG_nextidのコマンドを実行します。 |
