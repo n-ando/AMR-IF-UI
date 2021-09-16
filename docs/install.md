@@ -2,14 +2,15 @@
 <!-- TOC -->
 
 - [1. インストール](#1-インストール)
-- [コード取得](#コード取得)
-- [依存パッケージのインストール](#依存パッケージのインストール)
+    - [1.1. コード取得](#11-コード取得)
+    - [1.2. 依存パッケージのインストール](#12-依存パッケージのインストール)
+    - [1.3. アクセステスト](#13-アクセステスト)
 
 <!-- /TOC -->
 
 ## 1. インストール
 
-## コード取得
+### 1.1. コード取得
 
 本AMR-IFは、githubリポジトリからダウンロードするなどして適当なディレクトリに展開してください。
 
@@ -24,11 +25,11 @@ angular.json    ngsw-config.json  tsconfig.app.json
 browserslist    node_modules      tsconfig.json
 ```
 
-## 依存パッケージのインストール
+### 1.2. 依存パッケージのインストール
 
 ここで、npm ci コマンドで依存パッケージをインストールします。
 
- ```shell
+```shell
  $ sudo npm ci
     :
     > @angular/cli@9.1.0 postinstall /home/n-ando/work/AMR-IF-UI/node_modules/@angular/cli
@@ -58,9 +59,9 @@ Time: 542ms
  For more details and how to change this setting, see http://angular.io/analytics.
 ```
 
-ng serve コマンド実行後は、コマンドプロンプトは帰ってきませんが、これは裏でHTTPサービスが動作しているためです。次のアクセステストに進み、Webサービスにアクセスできるかテストします。
+"ng serve" コマンド実行後は、コマンドプロンプトは帰ってきませんが、これは裏でHTTPサービスが動作しているためです。次のアクセステストに進み、Webサービスにアクセスできるかテストします。
 
-## アクセステスト
+### 1.3. アクセステスト
 
 ブラウザから、http://localhost:4200 にアクセスしてみてください。
 
