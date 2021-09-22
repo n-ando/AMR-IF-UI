@@ -6,10 +6,11 @@
 
 - [1. 環境構築](#1-環境構築)
     - [1.1. 環境](#11-環境)
-    - [1.2. node.js のインストール](#12-nodejs-のインストール)
-        - [1.2.1. Ubuntu 18.04/ros melodic の場合](#121-ubuntu-1804ros-melodic-の場合)
-        - [1.2.2. Home Brew (macOS)](#122-home-brew-macos)
-- [インストール](#インストール)
+    - [1.2. Google Chromeの インストール](#12-google-chromeの-インストール)
+    - [1.3. node.js のインストール](#13-nodejs-のインストール)
+        - [1.3.1. Ubuntu 18.04/ros melodic の場合](#131-ubuntu-1804ros-melodic-の場合)
+        - [1.3.2. Home Brew (macOS)](#132-home-brew-macos)
+- [2. インストール](#2-インストール)
 
 <!-- /TOC -->
 
@@ -28,16 +29,29 @@
 - Angular
   - npmなどでインストール
 
-### 1.2. node.js のインストール
+### 1.2. Google Chromeの インストール
+
+Ubuntu Linux への Google Chrome も他のOS同様、ブラウザ（Ubuntuにデフォルトでインストールされている FireFox等を利用) で "chrome" と検索し、画面の指示に従いインストールするのが近道です。
+
+Ubuntuの場合、debパッケージ版のchromeがダウンロードされ、パッケージマネージャでインストールするところまでほぼ自動で行われます。
+
+インストール後は、左下の "アプリケーションを表示する" から Google Chromeを選択して起動するか、
+
+```shell
+$ /opt/google/chrome/chrome &
+```
+として起動することもできます。
+
+
+### 1.3. node.js のインストール
 
 ```shell
 $ sudo apt update
 $ sudo apt upgrade
 $ sudo apt install nodejs npm
-$ 
-```
 
-#### 1.2.1. Ubuntu 18.04/ros melodic の場合
+```
+#### 1.3.1. Ubuntu 18.04/ros melodic の場合
 
 rosがインストールされている状態から npm をインストールしようとすると、
 libssl1.0-dev の依存関係が解決されずインストールできない。強制的に
@@ -104,7 +118,7 @@ $ which npm
 /usr/local/bin/npm
 ```
 
-#### 1.2.2. Home Brew (macOS)
+#### 1.3.2. Home Brew (macOS)
 
 ```shell
 $ brew update
@@ -113,8 +127,43 @@ $ npm install angular
 ```
 
 
-## インストール
+## 2. インストール
 
-本AMR-IFは、
+本AMR-IFは、githubリポジトリからダウンロードするなどして適当なディレクトリに展開してください。
 
-$ git clone 
+```shell
+$ git clone https://github.com/robo-marc/AMR-IF-UI
+$ cd AMR-IF-UI
+$ ls
+LICENSE         doc               package-lock.json  tsconfig.spec.json
+LICENSE_HEADER  img               package.json       tslint.json
+README.md       karma.conf.js     src
+angular.json    ngsw-config.json  tsconfig.app.json
+browserslist    node_modules      tsconfig.json
+```
+
+ ここで、npm ci コマンドで依存パッケージをインストールします。
+
+ ```shell
+ $ sudo npm ci
+    :
+    > @angular/cli@9.1.0 postinstall /home/n-ando/work/AMR-IF-UI/node_modules/@angular/cli
+> node ./bin/postinstall/script.js
+
+added 1476 packages in 31.457s
+$ sudo npm install -g @angular/cli
+```
+
+```shell
+$ ng serve
+   :
+少し時間がかかります。
+   :
+Date: 2021-09-23T08:04:01.730Z - Hash: 98b0164d374b20b98c5c
+5 unchanged chunks
+
+Time: 542ms
+: Compiled successfully.
+```
+
+
